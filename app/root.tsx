@@ -1,5 +1,6 @@
 import type { LinksFunction } from "@remix-run/cloudflare";
-import { cssBundleHref } from "@remix-run/css-bundle";
+// import { cssBundleHref } from "@remix-run/css-bundle";
+import baseStyles from "~/styles/base.css";
 import {
   Links,
   LiveReload,
@@ -10,7 +11,8 @@ import {
 } from "@remix-run/react";
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+//  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+{ rel: "stylesheet", href: baseStyles },
 ];
 
 export default function App() {
