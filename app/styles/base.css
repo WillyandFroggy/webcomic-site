@@ -1,3 +1,252 @@
+/* Mobile */
+
 body {
-    background-color: red;
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgba(18, 18, 18, 0.75);
+  letter-spacing: 0.6px;
+}
+
+a {
+  color: rgba(18, 18, 18, 0.75);
+}
+
+  /* Responsive menu */
+  header {
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    height: 70px !important;
+    padding: 0;
+    overflow: hidden;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+  }
+  input[type=checkbox]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+  }
+  input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+  }
+  .sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 24px;
+    right: 15px;
+    height: 22px;
+    width: 22px;
+  }
+  .spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+  }
+  .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+  }
+  .diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+  }
+  .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+  }
+  .logo {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  .logo a {
+    letter-spacing: 0.6px;
+    text-decoration: none;
+  }
+  .logo a:hover {
+    color: rgb(18, 18, 18);
+  }
+  .menu {
+    margin: 0;
+    height: 100%;
+    position: fixed;
+    right: -250px;
+    width: 250px;
+    margin-top: 70px;
+    transition: transform 250ms ease-in-out;
+    background: rgb(255, 255, 255);
+  }
+  .menu.active {
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+  }
+  .menu ul li {
+    display: block;
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: rgba(18, 18, 18, 0.85);
+    transition: all 800ms ease;
+  }
+  .menu a:hover {
+    color: rgb(18, 18, 18);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+
+  main {
+    margin-top: 70px;
+  }
+  /* End of responsive menu */
+
+/* Footer section */
+footer {
+  padding: 25px 0 65px 0;
+  color: rgba(18, 18, 18, 0.75);
+  font-size: 0.95rem;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  color: rgb(18, 18, 18);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+footer li {
+  padding: 0.3rem 0;
+  display: block;
+}
+footer ul:first-child {
+  margin-top: 0;
+}
+/* End of footer section */
+
+/* Desktop */
+@media screen and (min-width: 920px){
+  /* Header */
+
+  header {
+    position: relative;
+    box-shadow: none;
+    height: auto;
+    padding: 0;
+    overflow: auto;
+    color: rgb(18, 18, 18);
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+.logo {
+  position: relative;
+  margin-top: 0;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.menu {
+  margin-right: 20px;
+  height: auto;
+  position: relative;
+  right: 0;
+  width: auto;
+  margin-top: 0;
+}
+
+.menu ul li {
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  display: inline;
+  margin-right: 20px;
+}
+.menu ul li:last-child {
+  margin-right: 0;
+}
+
+.menu-button {
+  display: none;
+}
+
+.sidebarIconToggle {
+  display: none;
+}
+/* End of header section */
+
+main {
+  margin-top: 0;
+}
+
+/*   Desktop Footer */
+  footer li {
+    padding: 0.2rem 0;
+    display: inline-block;
+    margin: 0 7px;
+  }
+  footer .left-grid-2, footer footer .right-grid-2 {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+  }
+/*   End of desktop footer */
+  
 }

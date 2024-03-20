@@ -3,12 +3,15 @@ import type { LinksFunction } from "@remix-run/cloudflare";
 import baseStyles from "~/styles/base.css";
 import {
   Links,
+  Link,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import MainNavigation from "./components/MainNavigation";
+import Footer from "./components/Footer";
 
 export const links: LinksFunction = () => [
 //  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -25,7 +28,18 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <header>
+          <div className="logo"><Link to="/">Willy + Froggy</Link></div>
+          <input type="checkbox" className="menu-button" id="openSidebarMenu" />
+          <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
+            <div className="spinner diagonal part-1"></div>
+            <div className="spinner horizontal"></div>
+            <div className="spinner diagonal part-2"></div>
+          </label>
+          <MainNavigation />
+        </header>
         <Outlet />
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
