@@ -10,8 +10,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import MainNavigation from "./components/MainNavigation";
-import Footer from "./components/Footer";
+import SiteHeader from "~/components/SiteHeader";
+import Footer from "~/components/Footer";
 
 export const links: LinksFunction = () => [
 //  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -19,6 +19,7 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+
   return (
     <html lang="en">
       <head>
@@ -28,16 +29,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <header>
-          <div className="logo"><Link to="/">Willy + Froggy</Link></div>
-          <input type="checkbox" className="menu-button" id="openSidebarMenu" />
-          <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
-            <div className="spinner diagonal part-1"></div>
-            <div className="spinner horizontal"></div>
-            <div className="spinner diagonal part-2"></div>
-          </label>
-          <MainNavigation />
-        </header>
+        <SiteHeader />
         <Outlet />
         <Footer />
         <ScrollRestoration />
