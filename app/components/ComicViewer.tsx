@@ -1,6 +1,11 @@
-function ComicViewer() {
+function ComicViewer(comic: { id: string, description: string }) {
+  console.log(comic);
   return (
-    <p>Comic Viewer</p>
+    <div>
+      <p>Comic Viewer</p>
+      {comic.id}
+      {comic.description}
+    </div>
   );
 }
 

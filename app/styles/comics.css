@@ -19,7 +19,7 @@
 }
 .comics_info h2 {
     max-width: 400px;
-    margin: 0 auto 25px auto;
+    margin: 2px auto 25px auto;
     color: rgb(255, 255, 255);
     line-height: 1.3;
  }
@@ -62,14 +62,11 @@
 @media screen and (min-width: 920px){
     .comics_container {
         max-width: 880px;
-        margin: 0 auto;
-    }
-    .comics_container {
-        max-width: 880px;
         flex-direction: row;
         justify-content: space-evenly;
+        margin: 0 auto;
     }
     .comics_info ul {
-        margin-bottom: 0;
+        margin-bottom: 2px;
     }
 }

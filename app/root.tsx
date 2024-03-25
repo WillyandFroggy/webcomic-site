@@ -3,7 +3,6 @@ import type { LinksFunction } from "@remix-run/cloudflare";
 import baseStyles from "~/styles/base.css";
 import {
   Links,
-  Link,
   LiveReload,
   Meta,
   Outlet,
