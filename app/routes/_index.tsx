@@ -1,7 +1,9 @@
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { MetaFunction, LinksFunction } from "@remix-run/cloudflare";
 import { useLoaderData, json } from "@remix-run/react";
 import ComicViewer from "~/components/ComicViewer";
 import { getLatestComic } from "~/data/comics";
+
+import comicStyles from "~/styles/comic.css";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,18 +12,21 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: comicStyles },
+  ];
+
 export function loader() {
   const comic = getLatestComic();
   console.log(comic);
   if (!comic) throw new Response("Comic not found", { status: 404 });
-  return json(comic);
+  return json({...comic, latest: "007"});
 }
 
 export default function Index() {
   const comic = useLoaderData<typeof loader>();
   return (
-    <main style={{backgroundColor: 'red'}}>
-      <h1>Welcome to Remix</h1>
+    <main>
       <ComicViewer {...comic} />
     </main>
   );

@@ -1,4 +1,5 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/cloudflare";
+import { Link } from "@remix-run/react";
 
 import comicsStyles from "~/styles/comics.css";
 import brightRedImage from "~/images/Bright-Red.jpg";
@@ -27,8 +28,8 @@ export default function Comics() {
             <h2>Bright Red</h2>
             <p>A weekly comic strip associated with the forthcoming adventure coming <em>The Bright Red Time Potion</em>.</p>
             <ul>
-              <li><a href="./index.html">Read Online</a></li>
-              <li><a href="./bright-red-archive.html">Comic Archive</a></li>
+              <li><Link to="../" prefetch="intent">Read Online</Link></li>
+              <li><Link to="../BR-archive" prefetch="intent">Comic Archive</Link></li>
               <li><a href="#">Buy Prints</a></li>
               <li><a href="https://www.webtoons.com/en/canvas/the-theft-of-the-rare-blue-seaweed/list?title_no=667854">Webtoon</a></li>
             </ul>

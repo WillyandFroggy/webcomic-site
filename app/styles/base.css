@@ -35,7 +35,7 @@ a {
     position: fixed;
     width: 100%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 18px;
     font-size: 24px;
   }
   .logo a {
@@ -204,7 +204,7 @@ footer ul:first-child {
 
   .logo {
     position: relative;
-    margin-top: 0;
+    margin-top: 6px;
     margin-left: 20px;
     text-align: left;
   }

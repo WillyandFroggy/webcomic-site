@@ -7,7 +7,7 @@ function SiteHeader() {
 
   return (
     <header>
-      <div className="logo"><Link to="/"><img src={WFLogo} alt="Willy and Froggy Logo" /></Link></div>
+      <div className="logo"><Link to="/" prefetch="intent"><img src={WFLogo} alt="Willy and Froggy Logo" /></Link></div>
       <input type="checkbox" className="menu-button" id="openSidebarMenu" onChange={() => setIsActive(!isActive)} />
       <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
         <div className="spinner diagonal part-1"></div>
@@ -17,10 +17,10 @@ function SiteHeader() {
       <nav className={`menu ${isActive ? 'active' : ''}`}>
         <ul>
           <li>
-            <NavLink to="/comics">Comics</NavLink>
+            <NavLink to="/comics" prefetch="intent">Comics</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about" prefetch="intent">About</NavLink>
           </li>
           <li>
               <a href="https://www.shopify.com/">Shop</a>
