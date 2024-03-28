@@ -6,7 +6,7 @@ function SiteHeader() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <header>
+    <header id="header">
       <div className="logo"><Link to="/" prefetch="intent"><img src={WFLogo} alt="Willy and Froggy Logo" /></Link></div>
       <input type="checkbox" className="menu-button" id="openSidebarMenu" onChange={() => setIsActive(!isActive)} />
       <label htmlFor="openSidebarMenu" className="sidebarIconToggle">

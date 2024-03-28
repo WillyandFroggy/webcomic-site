@@ -9,6 +9,11 @@ export const meta: MetaFunction = () => {
   return [
     { title: "Comics | Willy + Froggy" },
     { name: "description", content: "Comics | Willy + Froggy" },
+    { name: "og:url", content: "https://willyandfroggy.com/comics" },
+    { name: "og:type", content: "website" },
+    { name: "og:title", content: "Comics | Willy + Froggy" },
+    { name: "og:description", content: "Comics | Willy + Froggy" },
+    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
   ];
 };
 

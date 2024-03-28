@@ -35,6 +35,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <script src="/scripts/scroll-to-top.js" type="module"></script>
       </body>
     </html>
   );

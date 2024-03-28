@@ -1,9 +1,71 @@
+
+
 .comic-viewer-container {
-    background-color: blue;
     margin: 0 auto;
 }
 
+#comic-viewer-comic {
+    width: 100%;
+}
+
+.comic-viewer-nav-links {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 880px;
+    padding: 0 20px;
+}
+
+.comic-viewer-nav-links a {
+    margin: 0 10px;
+    color: rgba(18, 18, 18, 0.85);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 500ms ease;
+}
+ 
+.comic-viewer-nav-links a:hover {
+    color: rgba(18, 18, 18, 1);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+  
+
+.comic-viewer-nav-links .comic-viewer-prev-button {
+    margin-right: 35px;
+}
+
+.comic-viewer-nav-links .comic-viewer-next-button {
+    margin-left: 35px;
+}
+
+.comic-viewer-ad-buttons {
+    text-align: center;
+}
+
+.comic-viewer-ad-button {
+    display: inline-block;
+    margin: 20px 10px 20px 10px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    background-color: rgba(191, 48, 69, 0.8);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    transition: all 500ms ease;
+}
+
+.comic-viewer-ad-button:hover {
+    background-color: rgba(191, 48, 69, 1);
+    color: rgb(255, 255, 255);
+}
+
 @media screen and (min-width: 920px){
+
     .comic-viewer-container {
         max-width: 880px;
     }

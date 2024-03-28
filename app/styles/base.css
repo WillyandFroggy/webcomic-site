@@ -190,7 +190,6 @@ footer ul:first-child {
   header {
     position: relative;
     box-shadow: none;
-    height: 4.5rem;
     padding: 0;
     overflow: auto;
     color: rgb(18, 18, 18);
@@ -199,7 +198,6 @@ footer ul:first-child {
     justify-content: space-between;
     align-items: center;
     max-width: 880px;
-    margin: 0 auto;
   }
 
   .logo {
@@ -222,6 +220,7 @@ footer ul:first-child {
     transform: translateX(0);
     transition: transform 250ms ease-in-out;
   }
+
   .menu.active ul {
     padding: 0;
   }
