@@ -15,16 +15,16 @@ function ComicViewer(comic: { id: string, description: string, latest: string })
   return (
     <div className="comic-viewer-container">
       <div className="comic-container">
-        <img id="comic-viewer-comic" src={`/BR/${comic.id}.jpg`}
+      <img id="comic-viewer-comic" src={`/BR/${comic.id}.jpg`}
           alt={comic.description}/>
       </div>
       <div className="comic-viewer-nav-links">
         <Link to="/BR/001" prefetch="intent"
           style={prevComic ? {} : {visibility: 'hidden'}}>&lt;&lt; First</Link>
-        <Link to={`/BR/${prevComic}`} prefetch="intent"
+        <Link to={prevComic ? `/BR/${prevComic}` : "#"} prefetch="intent"
           className="comic-viewer-prev-button"
           style={prevComic ? {} : {visibility: 'hidden'}}>&lt; Previous</Link>
-        <Link to={`/BR/${nextComic}`} prefetch="intent"
+        <Link to={nextComic ? `/BR/${nextComic}` : "#"} prefetch="intent"
           className="comic-viewer-next-button"
           style={nextComic ? {} : {visibility: 'hidden'}}>Next &gt;</Link>
         <Link to={`/BR/${comic.latest}`} prefetch="intent"
