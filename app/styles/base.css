@@ -16,6 +16,10 @@ a {
   color: rgba(18, 18, 18, 0.75);
 }
 
+p {
+  line-height: 1.45rem;
+}
+
   /* Responsive menu */
   header {
     position: fixed;
@@ -156,7 +160,7 @@ a {
 
 /* Footer section */
 footer {
-  padding: 25px 0 65px 0;
+  padding: 35px 0 65px 0;
   color: rgba(18, 18, 18, 0.75);
   font-size: 0.95rem;
 }
@@ -252,7 +256,7 @@ footer ul:first-child {
   }
 
   footer {
-    padding: 25px 20px 65px 20px;
+    padding: 35px 20px 65px 20px;
     color: rgba(18, 18, 18, 0.75);
     font-size: 0.95rem;
     max-width: 860px;

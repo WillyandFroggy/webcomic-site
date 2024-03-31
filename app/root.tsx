@@ -1,6 +1,7 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 // import { cssBundleHref } from "@remix-run/css-bundle";
 import baseStyles from "~/styles/base.css";
+import basicPageStyles from "~/styles/page.css";
 import {
   Links,
   LiveReload,
@@ -8,6 +9,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
+  useRouteError,
 } from "@remix-run/react";
 import SiteHeader from "~/components/SiteHeader";
 import Footer from "~/components/Footer";
@@ -15,7 +18,22 @@ import Footer from "~/components/Footer";
 export const links: LinksFunction = () => [
 //  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 { rel: "stylesheet", href: baseStyles },
+{ rel: "stylesheet", href: basicPageStyles },
+
 ];
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Willy + Froggy" },
+    { name: "description", content: "Comics about a whale and a frog who go on adventures. These comics are made by Amari &#268;ertkus and published by Voyager Golden Comics." },
+    { name: "og:url", content: "https://willyandfroggy.com/" },
+    { name: "og:type", content: "website" },
+    { name: "og:title", content: "Willy + Froggy" },
+    { name: "og:description", content: "Comics about a whale and a frog who go on adventures. These comics are made by Amari &#268;ertkus and published by Voyager Golden Comics." },
+    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
+  ];
+};
+
 
 export default function App() {
 
@@ -31,6 +49,45 @@ export default function App() {
       <body>
         <SiteHeader />
         <Outlet />
+        <Footer />
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+        <script src="/scripts/scroll-to-top.js" type="module"></script>
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  let errorHeading = "An error occurred";
+  let errorMessage = "Opps! Something went wrong. Please try again later.";
+
+  if (isRouteErrorResponse(error)) {
+    switch (error.status) {
+      case 404:
+        errorHeading = "404 - Page Not Found";
+        errorMessage = "Oops! Looks like you tried to visit a page that doesn't exist.";
+        break;
+    }
+  }
+
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta />
+        <Links />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></link>
+      </head>
+      <body>
+        <SiteHeader />
+        <main className="basic-page">
+          <h1>{errorHeading}</h1>
+          <p>{errorMessage}</p>
+        </main>
         <Footer />
         <ScrollRestoration />
         <Scripts />

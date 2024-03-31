@@ -1,0 +1,28 @@
+main.basic-page {
+    max-width: 840px;
+    margin: 65px auto 0 auto;
+    padding: 0 20px;
+}
+
+main.basic-page h1 {
+    margin: 0.5em 0;
+}
+
+main.basic-page a {
+    color: rgba(18, 18, 18, 0.85);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 500ms ease;
+}
+ 
+main.basic-page a:hover {
+    color: rgba(18, 18, 18, 1);
+    text-decoration-thickness: 2px;
+}
+
+@media screen and (min-width: 920px){
+    main.basic-page {
+        margin-top: 0;
+    }
+}

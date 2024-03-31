@@ -8,5 +8,3 @@ window.onscroll = function() {
       }
       prevScrollpos = currentScrollPos;
 }
-
-console.log("hello");

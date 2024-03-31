@@ -23,7 +23,7 @@ function SiteHeader() {
             <NavLink to="/about" prefetch="intent">About</NavLink>
           </li>
           <li>
-              <a href="https://www.shopify.com/">Shop</a>
+              <a href="https://shop.willyandfroggy.com/">Shop</a>
           </li>
         </ul>
       </nav>

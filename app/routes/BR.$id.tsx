@@ -14,10 +14,15 @@ export function loader({ params }: LoaderFunctionArgs) {
   return json({...comic, latest: latest.id});
 }
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [
-    { title: `Bright Red #Make Dynamic` },
-    { name: "description", content: "Comics | Willy + Froggy" },
+    { title: `Bright Red #${data?.id} | Willy + Froggy` },
+    { name: "description", content: `${ data?.description }` },
+    { name: "og:url", content: "https://willyandfroggy.com/comics" },
+    { name: "og:type", content: "website" },
+    { name: "og:title", content: `Bright Red #${data?.id} | Willy + Froggy` },
+    { name: "og:description", content: `${ data?.description }` },
+    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
   ];
 };
 

@@ -8,11 +8,11 @@ import rareBlueImage from "~/images/The-Theft-of-the-Rare-Blue-Seaweed.jpg";
 export const meta: MetaFunction = () => {
   return [
     { title: "Comics | Willy + Froggy" },
-    { name: "description", content: "Comics | Willy + Froggy" },
+    { name: "description", content: "Willy and Froggy comics, including The Theft of the Rare Blue Seaweed and Bright Red, are made by Amari &#268;ertkus and published by Voyager Golden Comics. The Theft of the Rare Blue Seaweed is an adventure comic, while Bright Red is a weekly humour strip that is associated with a forthcoming adventure comic that will be called The Bright Red Time Potion." },
     { name: "og:url", content: "https://willyandfroggy.com/comics" },
     { name: "og:type", content: "website" },
     { name: "og:title", content: "Comics | Willy + Froggy" },
-    { name: "og:description", content: "Comics | Willy + Froggy" },
+    { name: "og:description", content: "Willy and Froggy comics, including The Theft of the Rare Blue Seaweed and Bright Red, are made by Amari &#268;ertkus and published by Voyager Golden Comics. The Theft of the Rare Blue Seaweed is an adventure comic, while Bright Red is a weekly humour strip that is associated with a forthcoming adventure comic that will be called The Bright Red Time Potion." },
     { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
   ];
 };
@@ -31,7 +31,7 @@ export default function Comics() {
           </div>
           <div className="comics_info">
             <h2>Bright Red</h2>
-            <p>A weekly comic strip associated with the forthcoming adventure coming <em>The Bright Red Time Potion</em>.</p>
+            <p>A weekly comic strip associated with the forthcoming adventure comic <em>The Bright Red Time Potion</em>.</p>
             <ul>
               <li><Link to="../" prefetch="intent">Read Online</Link></li>
               <li><Link to="../BR-archive" prefetch="intent">Comic Archive</Link></li>

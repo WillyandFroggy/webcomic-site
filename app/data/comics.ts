@@ -1,5 +1,5 @@
 let comics = [
-    { "id": "005", "description": "The fifth comic" },
+    { "id": "005", "description": "Willy asks Froggy if he is going to the jamboree. Froggy is planning to go, and is especially excited for the fireworks. Willy is frustrated by Froggy's misuse of a common English expression." },
     { "id": "004", "description": "The fourth comic" },
     { "id": "003", "description": "The third comic" },
     { "id": "002", "description": "The second comic" },
