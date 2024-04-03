@@ -13,7 +13,7 @@
     padding: 0 20px;
 }
 
-.comic-viewer-nav-links a {
+.comic-viewer-nav-links a, .comic-viewer-nav-links span {
     margin: 0 10px;
     color: rgba(18, 18, 18, 0.85);
     text-decoration: underline;
@@ -112,6 +112,10 @@
 .comic-viewer-description h2 {
     font-size: 1.5rem;
     margin: 0;
+}
+
+.comic-viewer-hidden-link {
+    visibility: hidden;
 }
 
 
