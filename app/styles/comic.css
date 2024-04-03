@@ -59,42 +59,59 @@
     color: rgb(255, 255, 255);
 }
 
-.comic-viewer-social-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.comic-viewer-social-buttons a {
+.comic-viewer-share-link {
     display: block;
-    width: 32px;
-    color: rgba(18, 18, 18, 0.8);
+    margin: 0 auto;
+    border: 2px solid rgba(18, 18, 18, 0.75);
+    color: rgba(18, 18, 18, 0.85);
+    width: 398px;
+    padding: 10px;
+    text-align: center;
     text-decoration: none;
-    transition: all 400ms ease;
-    margin: 0 10px;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    transition: all .5s ease;
 }
 
-.comic-viewer-social-buttons a:first-child {
-    margin-left: 12px;
-}
-.comic-viewer-social-buttons a:last-child {
-    margin-right: 0;
+.comic-viewer-share-link span {
+    color: rgba(18, 18, 18, 0.85);
+    transition: all .5s ease;
 }
 
-.comic-viewer-social-buttons a svg {
-    opacity: .55;
-    transition: all 400ms ease;
+.comic-viewer-share-link:hover {
+    background-color: rgba(18, 18, 18, 0.1);
+    color: rgba(18, 18, 18, 1);
+    color: black;
+    transition: all .5s ease;
 }
 
-.comic-viewer-social-buttons a svg:hover {
-    opacity: .70;
+.comic-viewer-share-link span:hover {
+    color: rgba(18, 18, 18, 1);
+    transition: all .5s ease;
 }
+
+.comic-viewer-share-link span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comic-viewer-share-link svg {
+    display: inline-block;
+    width: 1.7rem;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
 .comic-viewer-description {
     text-align: center;
-    margin: 20px auto 20px auto;
+    margin: 30px auto 20px auto;
     max-width: 650px;
     padding: 0 20px;
+}
+
+.comic-viewer-description h2 {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 

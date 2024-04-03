@@ -23,7 +23,7 @@ export const meta: MetaFunction = () => {
     { name: "og:type", content: "website" },
     { name: "og:title", content: "Willy + Froggy" },
     { name: "og:description", content: "Comics about a whale and a frog who go on adventures. These comics are made by Amari &#268;ertkus and published by Voyager Golden Comics." },
-    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
+    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red-Social-Media.jpg"}
   ];
 };
 

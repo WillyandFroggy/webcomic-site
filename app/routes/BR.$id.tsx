@@ -22,7 +22,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { name: "og:type", content: "website" },
     { name: "og:title", content: `Bright Red #${data?.id} | Willy + Froggy` },
     { name: "og:description", content: `${ data?.description }` },
-    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
+    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red-Social-Media.jpg"}
   ];
 };
 

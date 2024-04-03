@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
     { name: "og:type", content: "website" },
     { name: "og:title", content: "About | Willy + Froggy" },
     { name: "og:description", content: "Willy and Froggy comics, including The Theft of the Rare Blue Seaweed and Bright Red, are made by Amari &#268;ertkus and published by Voyager Golden Comics. The Theft of the Rare Blue Seaweed is an adventure comic, while Bright Red is a weekly humour strip that is associated with a forthcoming adventure comic that will be called The Bright Red Time Potion." },
-    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
+    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red-Social-Media.jpg"}
   ];
 };
 

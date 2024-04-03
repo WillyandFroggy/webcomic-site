@@ -1,13 +1,12 @@
 import { NavLink, Link } from "@remix-run/react";
 import { useState } from 'react';
-import WFLogo from "~/images/Bright-Red-Comic-WF-Logo.png";
 
 function SiteHeader() {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <header id="header">
-      <div className="logo"><Link to="/" prefetch="intent"><img src={WFLogo} alt="Willy and Froggy Logo" /></Link></div>
+      <div className="logo"><Link to="/" prefetch="intent"><img src="/images/Bright-Red-Comic-WF-Logo.png" alt="Willy and Froggy Logo" /></Link></div>
       <input type="checkbox" className="menu-button" id="openSidebarMenu" onChange={() => setIsActive(!isActive)} />
       <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
         <div className="spinner diagonal part-1"></div>

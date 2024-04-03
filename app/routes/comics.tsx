@@ -2,8 +2,6 @@ import type { MetaFunction, LinksFunction } from "@remix-run/cloudflare";
 import { Link } from "@remix-run/react";
 
 import comicsStyles from "~/styles/comics.css";
-import brightRedImage from "~/images/Bright-Red.jpg";
-import rareBlueImage from "~/images/The-Theft-of-the-Rare-Blue-Seaweed.jpg";
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,7 +11,7 @@ export const meta: MetaFunction = () => {
     { name: "og:type", content: "website" },
     { name: "og:title", content: "Comics | Willy + Froggy" },
     { name: "og:description", content: "Willy and Froggy comics, including The Theft of the Rare Blue Seaweed and Bright Red, are made by Amari &#268;ertkus and published by Voyager Golden Comics. The Theft of the Rare Blue Seaweed is an adventure comic, while Bright Red is a weekly humour strip that is associated with a forthcoming adventure comic that will be called The Bright Red Time Potion." },
-    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
+    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red-Social-Media.jpg"}
   ];
 };
 
@@ -27,7 +25,7 @@ export default function Comics() {
       <div className="comics_banner" style={{backgroundColor: "rgb(191, 48, 69)"}}>
         <div className="comics_container">
           <div className="comics_image">
-            <img src={brightRedImage} alt="Bright Red" />
+            <img src="/images/Bright-Red.jpg" alt="Bright Red" />
           </div>
           <div className="comics_info">
             <h2>Bright Red</h2>
@@ -44,7 +42,7 @@ export default function Comics() {
       <div className="comics_banner" style={{backgroundColor: "#2554a5"}}>
         <div className="comics_container">
           <div className="comics_image">
-            <img src={rareBlueImage} alt="The Theft of the Rare Blue Seaweed" />
+            <img src="/images/The-Theft-of-the-Rare-Blue-Seaweed.jpg" alt="The Theft of the Rare Blue Seaweed" />
           </div>
           <div className="comics_info">
             <h2>The Theft of the Rare Blue Seaweed</h2>
