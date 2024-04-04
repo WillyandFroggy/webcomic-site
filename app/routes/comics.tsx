@@ -33,7 +33,7 @@ export default function Comics() {
             <ul>
               <li><Link to="../" prefetch="intent">Read Online</Link></li>
               <li><Link to="../BR-archive" prefetch="intent">Comic Archive</Link></li>
-              <li><a href="#">Buy Prints</a></li>
+              <li><a href="https://shop.willyandfroggy.com/products/bright-red-prints?variant=44818068504820">Buy Prints</a></li>
               <li><a href="https://www.webtoons.com/en/canvas/the-theft-of-the-rare-blue-seaweed/list?title_no=667854">Webtoon</a></li>
             </ul>
           </div>
@@ -48,9 +48,9 @@ export default function Comics() {
             <h2>The Theft of the Rare Blue Seaweed</h2>
             <p>A whale and a frog go on an adventure to stop a group of poachers from illegally harvesting an endangered plant species.</p>
             <ul>
-              <li><a href="https://willyandfroggy.myshopify.com/products/the-theft-of-the-rare-blue-seaweed-print">Print Comic</a></li>
-              <li><a href="https://willyandfroggy.myshopify.com/products/the-theft-of-the-rare-blue-seaweed-digital">Digital Comic</a></li>
-              <li><a href="https://willyandfroggy.myshopify.com/products/the-theft-of-the-rare-blue-seaweed-t-shirt">T-Shirt</a></li>
+              <li><a href="https://shop.willyandfroggy.com/products/the-theft-of-the-rare-blue-seaweed-print">Print Comic</a></li>
+              <li><a href="https://shop.willyandfroggy.com/products/the-theft-of-the-rare-blue-seaweed-digital">Digital Comic</a></li>
+              <li><a href="https://shop.willyandfroggy.com/products/the-theft-of-the-rare-blue-seaweed-t-shirt">T-Shirt</a></li>
               <li><a href="https://www.webtoons.com/en/canvas/the-theft-of-the-rare-blue-seaweed/list?title_no=667854">Webtoon</a></li>
             </ul>
           </div>
