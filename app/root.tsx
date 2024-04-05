@@ -20,7 +20,9 @@ export const links: LinksFunction = () => [
 { rel: "stylesheet", href: baseStyles },
 { rel: "stylesheet", href: basicPageStyles },
 { rel: "icon", href: "/favicon.ico" },
-
+{ rel: "preconnect", href: "https://fonts.googleapis.com" },
+{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+{ href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap", rel: "stylesheet" },
 ];
 
 export const meta: MetaFunction = () => {
@@ -45,7 +47,6 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></link>
       </head>
       <body>
         <SiteHeader />
@@ -81,7 +82,6 @@ export function ErrorBoundary() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></link>
       </head>
       <body>
         <SiteHeader />
