@@ -1,4 +1,4 @@
-import { NavLink, Link } from "@remix-run/react";
+import { NavLink, Link, useLocation } from "@remix-run/react";
 import { useState, useEffect, useRef } from 'react';
 import { Image } from "@unpic/react";
 
@@ -6,12 +6,18 @@ function SiteHeader() {
   const [isActive, setIsActive] = useState(false);
 
   const checkboxRef = useRef<HTMLInputElement>(null);
+  const location = useLocation();
 
   useEffect(() => {
     if (checkboxRef.current) {
       checkboxRef.current.checked = isActive;
     }
+    console.log('isActive set to', isActive);
   }, [isActive]);
+  
+  useEffect(() => {
+    setIsActive(false);
+  }, [location]);
 
   return (
     <header id="header">

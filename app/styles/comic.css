@@ -8,6 +8,7 @@
 
 .comic-viewer-nav-links {
     margin: 0 auto;
+    width: 92%;
     max-width: 440px;
     display: flex;
     justify-content: space-between;
