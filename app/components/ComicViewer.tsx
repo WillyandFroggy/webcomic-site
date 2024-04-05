@@ -62,6 +62,7 @@ function ComicViewer(comic: { id: string, description: string, variantUrl: strin
           layout="constrained"
           width={880}
           height={880}
+          priority
           alt={comic.description}
         />
       </div>
