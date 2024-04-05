@@ -55,8 +55,8 @@ function ComicViewer(comic: { id: string, description: string, variantUrl: strin
   return (
     <div className="comic-viewer-container">
       <div className="comic-container">
-      <img id="comic-viewer-comic" src={`/BR/${comic.id}.jpg`}
-          alt={comic.description}/>
+        <img id="comic-viewer-comic" src={`/BR/${comic.id}.jpg`}
+            alt={comic.description}/>
       </div>
       <div className="comic-viewer-nav-links">
         {prevComic ? (        
