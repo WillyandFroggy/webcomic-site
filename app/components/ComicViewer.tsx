@@ -67,33 +67,37 @@ function ComicViewer(comic: { id: string, description: string, imageUrl: string,
         />
       </div>
       <div className="comic-viewer-nav-links">
-        {prevComic ? (        
-          <Link to="/BR/001" prefetch="intent"
-          className={prevComic ? '' : 'comic-viewer-hidden-link'}
-          >&lt;&lt; First</Link>
-        ) : (
-          <span className="comic-viewer-hidden-link">&lt;&lt; First</span>
-        )}
-        {prevComic ? (
-          <Link to={`/BR/${prevComic}`} prefetch="intent"
-            className="comic-viewer-prev-button"
-            >&lt; Previous</Link>
-        ) : (
-          <span className="comic-viewer-prev-button comic-viewer-hidden-link">&lt; Previous</span>
-        )}
-        {nextComic ? (
-          <Link to={`/BR/${nextComic}`} prefetch="intent"
-            className="comic-viewer-next-button"
-            >Next &gt;</Link>
-        ) : (
-          <span className="comic-viewer-next-button comic-viewer-hidden-link">Next &gt;</span>
-        )}
-        {nextComic ? (
-          <Link to={`/BR/${comic.latest}`} prefetch="intent"
-          >Latest &gt;&gt;</Link>
-        ) : (
-          <span className="comic-viewer-hidden-link">Latest &gt;&gt;</span>
-        )}
+        <div className="comic-viewer-left-links">
+          {prevComic ? (        
+            <Link to="/BR/001" prefetch="intent"
+            className={prevComic ? '' : 'comic-viewer-hidden-link'}
+            >&lt;&lt; First</Link>
+          ) : (
+            <span className="comic-viewer-hidden-link">&lt;&lt; First</span>
+          )}
+          {prevComic ? (
+            <Link to={`/BR/${prevComic}`} prefetch="intent"
+              className="comic-viewer-prev-button"
+              >&lt; Previous</Link>
+          ) : (
+            <span className="comic-viewer-hidden-link">&lt; Previous</span>
+          )}
+        </div>
+        <div className="comic-viewer-right-links">
+          {nextComic ? (
+            <Link to={`/BR/${nextComic}`} prefetch="intent"
+              className="comic-viewer-next-button"
+              >Next &gt;</Link>
+          ) : (
+            <span className="comic-viewer-hidden-link">Next &gt;</span>
+          )}
+          {nextComic ? (
+            <Link to={`/BR/${comic.latest}`} prefetch="intent"
+            >Latest &gt;&gt;</Link>
+          ) : (
+            <span className="comic-viewer-hidden-link">Latest &gt;&gt;</span>
+          )}
+        </div>
       </div>
       <div className="comic-viewer-ad-buttons">
         <a href={ comic.variantUrl } className="comic-viewer-ad-button">Buy Print</a>

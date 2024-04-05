@@ -7,10 +7,10 @@
 }
 
 .comic-viewer-nav-links {
-    text-align: center;
     margin: 0 auto;
-    max-width: 880px;
-    padding: 0 20px;
+    max-width: 440px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .comic-viewer-nav-links a, .comic-viewer-nav-links span {
@@ -25,26 +25,22 @@
 .comic-viewer-nav-links a:hover {
     color: rgba(18, 18, 18, 1);
 }
-  
-.comic-viewer-nav-links .comic-viewer-prev-button {
-    margin-right: 35px;
-}
-
-.comic-viewer-nav-links .comic-viewer-next-button {
-    margin-left: 35px;
-}
 
 .comic-viewer-ad-buttons {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 420px;
 }
 
 .comic-viewer-ad-button {
     display: inline-block;
-    margin: 20px 10px 20px 10px;
+    margin: 20px 0;
     height: 50px;
-    width: 200px;
+    width: 48%;
     text-align: center;
-    background-color: rgba(191, 48, 69, 1);
+    background-color: rgba(191, 48, 69, 0.8);
     color: rgb(255, 255, 255);
     box-sizing: border-box;
     line-height: 50px;
@@ -55,22 +51,24 @@
 }
 
 .comic-viewer-ad-button:hover {
-    background-color: rgba(191, 48, 69, 0.8);
+    background-color: rgba(191, 48, 69, 1);
     color: rgb(255, 255, 255);
 }
 
 .comic-viewer-share-link {
     display: block;
     margin: 0 auto;
-    border: 2px solid rgba(18, 18, 18, 0.75);
-    color: rgba(18, 18, 18, 0.85);
-    width: 398px;
-    padding: 10px;
+    border: 2px solid rgba(18, 18, 18, .75);
+    color: #121212d9;
+    width: 85%;
+    max-width: 420px;
+    padding: 10px 0;
     text-align: center;
     text-decoration: none;
     font-size: 1.1rem;
     letter-spacing: .1rem;
     transition: all .5s ease;
+    box-sizing: border-box;
 }
 
 .comic-viewer-share-link span {

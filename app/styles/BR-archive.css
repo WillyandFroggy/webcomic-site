@@ -2,6 +2,7 @@
     text-align: center;
 }
 .BR-archive img {
+    margin-top: 10pt;
     max-width: 300px;
 }
 .BR-archive ul {
@@ -9,7 +10,7 @@ list-style-type: none;
 padding: 0;
 }
 .BR-archive ul li {
-margin-bottom: 0.5rem;
+margin-bottom: 0.85rem;
 }
 .BR-archive a {
 text-decoration: none;
@@ -19,4 +20,13 @@ color: rgb(18, 18, 18);
 text-decoration: underline;
 text-underline-offset: 3px;
 text-decoration-thickness: 1px;
+}
+
+@media screen and (min-width: 920px){
+    .BR-archive img {
+        margin-top: 0;
+    }
+    .BR-archive ul li {
+        margin-bottom: 0.55rem;
+    }
 }
