@@ -44,7 +44,7 @@
     height: 50px;
     width: 200px;
     text-align: center;
-    background-color: rgba(191, 48, 69, 0.8);
+    background-color: rgba(191, 48, 69, 1);
     color: rgb(255, 255, 255);
     box-sizing: border-box;
     line-height: 50px;
@@ -55,7 +55,7 @@
 }
 
 .comic-viewer-ad-button:hover {
-    background-color: rgba(191, 48, 69, 1);
+    background-color: rgba(191, 48, 69, 0.8);
     color: rgb(255, 255, 255);
 }
 

@@ -19,6 +19,7 @@ export const links: LinksFunction = () => [
 //  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 { rel: "stylesheet", href: baseStyles },
 { rel: "stylesheet", href: basicPageStyles },
+{ rel: "icon", href: "/favicon.ico" },
 
 ];
 

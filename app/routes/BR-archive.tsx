@@ -1,6 +1,7 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/cloudflare";
-import comicsStyles from "~/styles/BR-archive.css";
 import { Link } from "@remix-run/react";
+import { Image } from "@unpic/react";
+import comicsStyles from "~/styles/BR-archive.css";
 import { getAllComics } from "~/data/comics";
 
 export const meta: MetaFunction = () => {
@@ -23,13 +24,20 @@ export default function Comics() {
   let data = getAllComics();
 
   return (
-    <main className="BR-archive">
-      <img src="/images/Bright-Red-Comic-Archive.png" alt="Bright Red Comic Archive" />
-        <ul>
-        {data.map((comic) => (
-            <li><Link to={`../BR/${comic.id}`}>{`#${comic.id}`}</Link></li>
-          ))}
-        </ul>
+<main className="BR-archive">
+      <Image
+        src="https://cdn.shopify.com/s/files/1/0671/9838/6420/files/Bright-Red-Comic-Archive.png?v=1712323077"
+        layout="constrained"
+        width={300}
+        height={140}
+        priority
+        alt="Bright Red Comic Archive"
+      />
+      <ul>
+      {data.map((comic) => (
+          <li><Link to={`../BR/${comic.id}`}>{`#${comic.id}`}</Link></li>
+        ))}
+      </ul>
     </main>
   );
 }

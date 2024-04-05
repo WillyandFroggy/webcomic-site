@@ -1,5 +1,6 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/cloudflare";
 import { Link } from "@remix-run/react";
+import { Image } from "@unpic/react";
 
 import comicsStyles from "~/styles/comics.css";
 
@@ -25,7 +26,14 @@ export default function Comics() {
       <div className="comics_banner" style={{backgroundColor: "rgb(191, 48, 69)"}}>
         <div className="comics_container">
           <div className="comics_image">
-            <img src="/images/Bright-Red.jpg" alt="Bright Red" />
+            <Image
+              src="https://cdn.shopify.com/s/files/1/0671/9838/6420/files/Bright-Red.jpg?v=1712323077"
+              layout="constrained"
+              width={400}
+              height={350}
+              priority
+              alt="Bright Red"
+            />
           </div>
           <div className="comics_info">
             <h2>Bright Red</h2>
@@ -42,7 +50,14 @@ export default function Comics() {
       <div className="comics_banner" style={{backgroundColor: "#2554a5"}}>
         <div className="comics_container">
           <div className="comics_image">
-            <img src="/images/The-Theft-of-the-Rare-Blue-Seaweed.jpg" alt="The Theft of the Rare Blue Seaweed" />
+            <Image
+              src="https://cdn.shopify.com/s/files/1/0671/9838/6420/files/The-Theft-of-the-Rare-Blue-Seaweed.jpg?v=1712323077"
+              layout="constrained"
+              width={400}
+              height={350}
+              priority
+              alt="The Theft of the Rare Blue Seaweed"
+            />
           </div>
           <div className="comics_info">
             <h2>The Theft of the Rare Blue Seaweed</h2>
