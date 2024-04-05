@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import { useEffect } from "react";
+import { Image } from "@unpic/react";
 
 function ComicViewer(comic: { id: string, description: string, variantUrl: string, latest: string }) { 
   let nextComic = null;
@@ -55,8 +56,14 @@ function ComicViewer(comic: { id: string, description: string, variantUrl: strin
   return (
     <div className="comic-viewer-container">
       <div className="comic-container">
-        <img id="comic-viewer-comic" src={`/BR/${comic.id}.jpg`}
-            alt={comic.description}/>
+        <Image
+          id="comic-viewer-comic"
+          src="https://cdn.shopify.com/static/sample-images/bath.jpeg"
+          layout="constrained"
+          width={880}
+          height={880}
+          alt={comic.description}
+        />
       </div>
       <div className="comic-viewer-nav-links">
         {prevComic ? (        
