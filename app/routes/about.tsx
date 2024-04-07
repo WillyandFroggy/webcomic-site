@@ -24,7 +24,7 @@ export default function About() {
     <main className="basic-page">
         <h1>About</h1>
         <p>Willy and Froggy comics, including <em>The Theft of the Rare Blue Seaweed</em> and <em>Bright Red</em>, are made by Amari &#268;ertkus and published by Voyager Golden Comics. <em>The Theft of the Rare Blue Seaweed</em> is an adventure comic, while <em>Bright Red</em> is a weekly humour strip that is associated with a forthcoming adventure comic that will be called <em>The Bright Red Time Potion</em>.</p>
-        <p>Amari is fully comitted to completing <em>The Bright Red Time Potion</em> under any circumstances, but if you would like to speed up the process, please consider supporting the project through the <a href="https://shop.willyandfroggy.com/products/tip-jar">TIP JAR</a> or <a href="https://shop.willyandfroggy.com/">ONLINE SHOP</a>. Also, please share these comics with anyone who you think would enjoy them.</p>
+        <p>Amari is fully comitted to completing <em>The Bright Red Time Potion</em> under any financial circumstances, but if you would like to speed up the process, please consider supporting the project through the <a href="https://shop.willyandfroggy.com/products/tip-jar">TIP JAR</a> or <a href="https://shop.willyandfroggy.com/">ONLINE SHOP</a>. Also, please share these comics with anyone who you think would enjoy them.</p>
     </main>
   );
 }

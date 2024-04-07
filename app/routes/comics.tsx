@@ -27,7 +27,7 @@ export default function Comics() {
         <div className="comics_container">
           <div className="comics_image">
             <Image
-              src="https://cdn.shopify.com/s/files/1/0671/9838/6420/files/Bright-Red.jpg?v=1712323077"
+              src="https://cdn.shopify.com/s/files/1/0671/9838/6420/files/Bright-Red.png?v=1712499995"
               layout="constrained"
               width={400}
               height={350}
@@ -51,7 +51,7 @@ export default function Comics() {
         <div className="comics_container">
           <div className="comics_image">
             <Image
-              src="https://cdn.shopify.com/s/files/1/0671/9838/6420/files/The-Theft-of-the-Rare-Blue-Seaweed.jpg?v=1712323077"
+              src="https://cdn.shopify.com/s/files/1/0671/9838/6420/files/The-Theft-of-the-Rare-Blue-Seaweed.png?v=1712499996"
               layout="constrained"
               width={400}
               height={350}
