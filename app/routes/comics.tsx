@@ -31,7 +31,6 @@ export default function Comics() {
               layout="constrained"
               width={400}
               height={350}
-              priority
               alt="Bright Red"
             />
           </div>
@@ -42,7 +41,7 @@ export default function Comics() {
               <li><Link to="../" prefetch="intent">Read Online</Link></li>
               <li><Link to="../BR-archive" prefetch="intent">Comic Archive</Link></li>
               <li><a href="https://shop.willyandfroggy.com/products/bright-red-prints?variant=44818068504820">Buy Prints</a></li>
-              <li><a href="https://www.webtoons.com/en/canvas/the-theft-of-the-rare-blue-seaweed/list?title_no=667854">Webtoon</a></li>
+              <li><a href="https://www.webtoons.com/en/canvas/bright-red/list?title_no=950983">Webtoon</a></li>
             </ul>
           </div>
         </div>
@@ -55,7 +54,6 @@ export default function Comics() {
               layout="constrained"
               width={400}
               height={350}
-              priority
               alt="The Theft of the Rare Blue Seaweed"
             />
           </div>

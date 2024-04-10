@@ -30,7 +30,6 @@ export default function Comics() {
         layout="constrained"
         width={300}
         height={140}
-        priority
         alt="Bright Red Comic Archive"
       />
       <ul>

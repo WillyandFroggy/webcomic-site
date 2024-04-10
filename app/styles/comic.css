@@ -2,8 +2,39 @@
     margin: 0 auto;
 }
 
+.comic-viewer-background {
+    width: 100%;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+.comic-viewer-background.hide-comic {
+    animation: pulse 3.5s infinite;
+}
+
 #comic-viewer-comic {
     width: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#comic-viewer-comic.hide-comic {
+    opacity: 0;
 }
 
 .comic-viewer-nav-links {
@@ -129,8 +160,8 @@
         height:865px;
         overflow:hidden;
     }
-    
-    #comic-viewer-comic {
+
+    .comic-viewer-background {
         position: absolute;
         bottom: 0;
     }

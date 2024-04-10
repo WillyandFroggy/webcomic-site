@@ -12,7 +12,6 @@ function SiteHeader() {
     if (checkboxRef.current) {
       checkboxRef.current.checked = isActive;
     }
-    console.log('isActive set to', isActive);
   }, [isActive]);
   
   useEffect(() => {
@@ -26,7 +25,6 @@ function SiteHeader() {
           alt="Willy and Froggy Logo"
           width={90}
           height={40}
-          priority
         />
        </Link>
       </div>
