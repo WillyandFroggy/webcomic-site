@@ -2,31 +2,6 @@
     margin: 0 auto;
 }
 
-.comic-viewer-background {
-    width: 100%;
-    background-size: cover;
-    background-position:center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.4;
-    }
-}
-
-.comic-viewer-background.hide-comic {
-    animation: pulse 3.5s infinite;
-}
-
 #comic-viewer-comic {
     width: 100%;
     opacity: 1;
@@ -147,6 +122,11 @@
     visibility: hidden;
 }
 
+.preloadingComics img {
+    position: absolute;
+    top: 0;
+}
+
 
 @media screen and (min-width: 920px){
 
@@ -161,7 +141,7 @@
         overflow:hidden;
     }
 
-    .comic-viewer-background {
+    #comic-viewer-comic {
         position: absolute;
         bottom: 0;
     }

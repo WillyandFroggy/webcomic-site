@@ -1,7 +1,7 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/cloudflare";
 import { useLoaderData, json } from "@remix-run/react";
 import ComicViewer from "~/components/ComicViewer";
-import { getLatestComic } from "~/data/comics";
+import { getComic, getLatestComic } from "~/data/comics";
 
 import comicStyles from "~/styles/comic.css";
 
@@ -10,9 +10,10 @@ export const links: LinksFunction = () => [
 ];
 
 export function loader() {
-  const comic = getLatestComic();
+  const latest = getLatestComic();
+  const comic = getComic(latest.id);
   if (!comic) throw new Response("Comic not found", { status: 404 });
-  return json({...comic, latest: comic.id});
+  return json({...comic, latest: latest.id});
 }
 
 export const meta: MetaFunction = () => {

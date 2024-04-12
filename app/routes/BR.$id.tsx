@@ -8,10 +8,10 @@ import comicStyles from "~/styles/comic.css";
 export function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
   if (id === undefined) throw new Response("Id is undefined");
+  const latest = getLatestComic();  
   const comic = getComic(id);
-  const latest = getLatestComic();
   if (!comic || !latest) throw new Response("Comic not found", { status: 404 });
-  return json({...comic, latest: latest.id});
+  return json({ ...comic, latest: latest.id });
 }
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {

@@ -1,9 +1,17 @@
 import { Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
-import { blurhashToCssGradientString } from "@unpic/placeholder";
 import { Image } from "@unpic/react";
 
-function ComicViewer(comic: { id: string, description: string, imageUrl: string, variantUrl: string, blurHash: string, latest: string }) { 
+function ComicViewer(comic: {
+  id: string,
+  description: string,
+  imageUrl: string,
+  variantUrl: string,
+  prevComicImageUrl: string,
+  nextComicImageUrl: string,
+  latest: string
+  }) { 
+
   let nextComic = null;
   let prevComic = null;
 
@@ -20,7 +28,8 @@ function ComicViewer(comic: { id: string, description: string, imageUrl: string,
   useEffect(() => {
     // check if the image is loaded, if so, set comicIsLoading to false
     const comicImage = document.getElementById("comic-viewer-comic");
-    if (comicImage && (comicImage as HTMLImageElement).complete) {
+
+    if (comicImage) {
       setComicIsLoading(false);
     }
 
@@ -65,19 +74,16 @@ function ComicViewer(comic: { id: string, description: string, imageUrl: string,
   return (
     <div className="comic-viewer-container">
       <div className="comic-container">
-        <div className={`comic-viewer-background${comicIsLoading ? ' hide-comic' : ''}`}
-              style={{ background: blurhashToCssGradientString(comic.blurHash)}}>
-          <Image
-            id="comic-viewer-comic"
-            className={ comicIsLoading ? 'hide-comic' : '' }
-            src={comic.imageUrl}
-            layout="constrained"
-            width={880}
-            height={880}
-            alt={comic.description}
-            onLoad={() => setComicIsLoading(false)}
-          />
-        </div>
+        <Image
+          id="comic-viewer-comic"
+          className={ comicIsLoading ? 'hide-comic' : '' }
+          src={comic.imageUrl}
+          layout="constrained"
+          width={880}
+          height={880}
+          alt={comic.description}
+          onLoad={() => setComicIsLoading(false)}
+        />
       </div>
       <div className="comic-viewer-nav-links">
         <div className="comic-viewer-left-links">
@@ -90,7 +96,7 @@ function ComicViewer(comic: { id: string, description: string, imageUrl: string,
             <span className="comic-viewer-hidden-link">&lt;&lt; First</span>
           )}
           {prevComic ? (
-            <Link to={`/BR/${prevComic}`} prefetch="render"
+            <Link to={`/BR/${prevComic}`} prefetch="viewport"
               className="comic-viewer-prev-button"
               onClick={() => setComicIsLoading(true)}
               >&lt; Previous</Link>
@@ -133,6 +139,22 @@ function ComicViewer(comic: { id: string, description: string, imageUrl: string,
       <div className="comic-viewer-description">
         <h2>Bright Red #{comic.id}</h2>
         <p>{comic.description}</p>
+      </div>
+      <div className="preloadingComics" style={{ visibility:"hidden", position: "absolute", top: "0" }}>
+      <Image
+          src={comic.prevComicImageUrl}
+          layout="constrained"
+          width={880}
+          height={880}
+          alt="preloading prev comic"
+        />
+        <Image
+          src={comic.nextComicImageUrl}
+          layout="constrained"
+          width={880}
+          height={880}
+          alt="preloading next comic"
+        />
       </div>
     </div>
   );
