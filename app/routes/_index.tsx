@@ -3,7 +3,7 @@ import { useLoaderData, json } from "@remix-run/react";
 import ComicViewer from "~/components/ComicViewer";
 import { getComic, getLatestComic } from "~/data/comics";
 
-import comicStyles from "~/styles/comic.css";
+import comicStyles from "~/styles/BR-id.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: comicStyles },
