@@ -42,8 +42,8 @@ export function getComic(id: string) {
     }
 
     const comic = comics[index];
-    const prevComicImageUrl = index > 0 ? comics[index - 1].imageUrl : "none";
-    const nextComicImageUrl = index < comics.length - 1 ? comics[index + 1].imageUrl : "none";
+    const prevComicImageUrl = index > 0 ? comics[index - 1].imageUrl : comics[index].imageUrl;
+    const nextComicImageUrl = index < comics.length - 1 ? comics[index + 1].imageUrl : comics[index].imageUrl;
 
     return {
         ...comic,

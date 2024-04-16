@@ -22,7 +22,7 @@ export const links: LinksFunction = () => [
 
 export default function Comics() {
   return (
-    <main>
+    <main className="comics_page">
       <div className="comics_banner" style={{backgroundColor: "rgb(191, 48, 69)"}}>
         <div className="comics_container">
           <div className="comics_image">
