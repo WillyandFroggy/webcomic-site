@@ -34,7 +34,7 @@ export default function Comics() {
       />
       <ul>
       {data.map((comic) => (
-          <li><Link to={`../BR/${comic.id}`}>{`#${comic.id}`}</Link></li>
+          <li><Link to={`../BR/${comic.id}`} key={comic.id}>{`#${comic.id}`}</Link></li>
         ))}
       </ul>
     </main>
