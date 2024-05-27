@@ -64,10 +64,10 @@ header {
   opacity: 1;
   animation: fadeInAnimation 0.5s ease-in-out;
 }
-input[type=checkbox]:checked ~ #sidebarMenu {
+input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
-input[type=checkbox] {
+input[type="checkbox"] {
   transition: all 0.3s;
   box-sizing: border-box;
   display: none;
@@ -113,18 +113,18 @@ input[type=checkbox] {
   float: left;
   margin-top: 5px;
 }
-input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
   transition: all 0.3s;
   box-sizing: border-box;
   opacity: 0;
 }
-input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(135deg);
   margin-top: 8px;
 }
-input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(-135deg);
@@ -200,7 +200,7 @@ footer ul:first-child {
 /* End of footer section */
 
 /* Desktop */
-@media screen and (min-width: 920px){
+@media screen and (min-width: 920px) {
   /* Header */
 
   header {
@@ -279,10 +279,10 @@ footer ul:first-child {
     display: inline-block;
     margin: 0 7px;
   }
-  footer .left-grid-2, footer footer .right-grid-2 {
+  footer .left-grid-2,
+  footer footer .right-grid-2 {
     text-align: center;
     justify-self: center;
     align-self: center;
   }
-  
 }
