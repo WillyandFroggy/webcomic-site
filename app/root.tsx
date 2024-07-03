@@ -12,34 +12,50 @@ import {
   isRouteErrorResponse,
   useRouteError,
 } from "@remix-run/react";
-import SiteHeader from "~/components/SiteHeader";
+import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 
 export const links: LinksFunction = () => [
-//  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-{ rel: "stylesheet", href: baseStyles },
-{ rel: "stylesheet", href: basicPageStyles },
-{ rel: "icon", href: "/favicon.ico" },
-{ rel: "preconnect", href: "https://fonts.googleapis.com" },
-{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-{ href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap", rel: "stylesheet" },
+  //  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: baseStyles },
+  { rel: "stylesheet", href: basicPageStyles },
+  { rel: "icon", href: "/favicon.ico" },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap",
+    rel: "stylesheet",
+  },
 ];
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Willy + Froggy" },
-    { name: "description", content: "Comics about a whale and a frog who go on adventures. These comics are made by Amari &#268;ertkus and published by Voyager Golden Comics." },
+    {
+      name: "description",
+      content:
+        "Comics about a whale and a frog who go on adventures. These comics are made by Amari &#268;ertkus and published by Voyager Golden Comics.",
+    },
     { name: "og:url", content: "https://willyandfroggy.com/" },
     { name: "og:type", content: "website" },
     { name: "og:title", content: "Willy + Froggy" },
-    { name: "og:description", content: "Comics about a whale and a frog who go on adventures. These comics are made by Amari &#268;ertkus and published by Voyager Golden Comics." },
-    { name: "og:image", content: "https://willyandfroggy.com/images/Bright-Red.jpg"}
+    {
+      name: "og:description",
+      content:
+        "Comics about a whale and a frog who go on adventures. These comics are made by Amari &#268;ertkus and published by Voyager Golden Comics.",
+    },
+    {
+      name: "og:image",
+      content: "https://willyandfroggy.com/images/Bright-Red.jpg",
+    },
   ];
 };
 
-
 export default function App() {
-
   return (
     <html lang="en">
       <head>
@@ -49,7 +65,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <SiteHeader />
+        <Navbar />
         <Outlet />
         <Footer />
         <ScrollRestoration />
@@ -70,7 +86,8 @@ export function ErrorBoundary() {
     switch (error.status) {
       case 404:
         errorHeading = "404 - Page Not Found";
-        errorMessage = "Oops! Looks like you tried to visit a page that doesn't exist.";
+        errorMessage =
+          "Oops! Looks like you tried to visit a page that doesn't exist.";
         break;
     }
   }
@@ -84,7 +101,7 @@ export function ErrorBoundary() {
         <Links />
       </head>
       <body>
-        <SiteHeader />
+        <Navbar />
         <main className="basic-page">
           <h1>{errorHeading}</h1>
           <p>{errorMessage}</p>
