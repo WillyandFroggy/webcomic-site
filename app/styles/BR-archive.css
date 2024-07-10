@@ -1,37 +1,37 @@
 .BR-archive {
-    text-align: center;
+  text-align: center;
 }
 .BR-archive img {
-    margin-top: 10pt;
-    max-width: 300px;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+  margin-top: 10pt;
+  max-width: 300px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
-.BR-archive img.hide-comic {
-    opacity: 0;
+.BR-archive img.hide-image {
+  opacity: 0;
 }
 .BR-archive ul {
-list-style-type: none;
-padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 .BR-archive ul li {
-margin-bottom: 0.85rem;
+  margin-bottom: 0.85rem;
 }
 .BR-archive a {
-text-decoration: none;
+  text-decoration: none;
 }
 .BR-archive a:hover {
-color: rgb(18, 18, 18);
-text-decoration: underline;
-text-underline-offset: 3px;
-text-decoration-thickness: 1px;
+  color: rgb(18, 18, 18);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
-@media screen and (min-width: 920px){
-    .BR-archive img {
-        margin-top: 0;
-    }
-    .BR-archive ul li {
-        margin-bottom: 0.55rem;
-    }
+@media screen and (min-width: 920px) {
+  .BR-archive img {
+    margin-top: 0;
+  }
+  .BR-archive ul li {
+    margin-bottom: 0.55rem;
+  }
 }
