@@ -91,7 +91,6 @@ function ComicViewer(comic: {
           {prevComic ? (
             <Link
               to="/BR/001"
-              prefetch="viewport"
               className={prevComic ? "" : "comic-viewer-hidden-link"}
               onClick={() => setComicIsLoading(true)}
             >
@@ -103,7 +102,6 @@ function ComicViewer(comic: {
           {prevComic ? (
             <Link
               to={`/BR/${prevComic}`}
-              prefetch="viewport"
               className="comic-viewer-prev-button"
               onClick={() => setComicIsLoading(true)}
             >
@@ -117,7 +115,6 @@ function ComicViewer(comic: {
           {nextComic ? (
             <Link
               to={`/BR/${nextComic}`}
-              prefetch="viewport"
               className="comic-viewer-next-button"
               onClick={() => setComicIsLoading(true)}
             >
@@ -129,7 +126,6 @@ function ComicViewer(comic: {
           {nextComic ? (
             <Link
               to={`/BR/${comic.latest}`}
-              prefetch="viewport"
               onClick={() => setComicIsLoading(true)}
             >
               Latest &gt;&gt;
